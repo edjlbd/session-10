@@ -3,15 +3,22 @@ Vue.component('bar-chart', {
   props: ['data', 'options'],
   mounted () {
     var data = this.data || {
-      labels: [2007,2008,2009,2010,2011,2012,2013,2014,2015],
+      labels: ["AB","BC","MB","NB","NL","NS","NT","ON","PE","QC","SK","YT","N/A"],
       datasets: [
         {
-          label: 'Rhinoceros tués chaque année par le braconnage en Afrique du Sud',
+          label: 'TEXT FRAUD',
           backgroundColor: '#f87979',
-          data: [13, null,122,333,448,668,1004,1215,749],
+          data: [92,60,18,10,6,11,0,348,2,189,25,0,6],
           datalabels: {
             align: 'end',
-            anchor: 'end'
+          } ,      
+        },
+                  {
+          label: 'FRAUD IN THOUSANDS $',
+          backgroundColor: '#ADD8E6',
+          data: [123.329,44.331,16.918,8.765,1.550,4.120,0,223.692,0,116.520,17.046,0,11.181],
+          datalabels: {
+            align: 'end',
           }
         }
       ]
@@ -22,12 +29,12 @@ Vue.component('bar-chart', {
         enabled: false
       },
       legend: {
-        display: false
+        display: true
       },
 			plugins: {
 				datalabels: {
           display: true,
-					color: '#c46060',
+					color: '#000000',
 					font: {
 						weight: 'bold'
 					},
